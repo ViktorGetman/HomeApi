@@ -100,7 +100,7 @@ namespace HomeApi.Controllers
         }
         
         /// <summary>
-        /// Обновление существующего устройства
+        /// Удаление существующего устройства
         /// </summary>
         [HttpDelete] 
         [Route("{id}")] 
