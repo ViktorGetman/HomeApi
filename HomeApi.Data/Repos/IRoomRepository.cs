@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using HomeApi.Data.Models;
 using HomeApi.Data.Queries;
@@ -12,6 +13,7 @@ namespace HomeApi.Data.Repos
     {
         Task<Room> GetRoomById(Guid id);
         Task<Room> GetRoomByName(string name);
+        Task<Room[]> GetRooms();
         Task AddRoom(Room room);
         Task UpdateRoom(Room room, UpdateRoomQuery query);
     }

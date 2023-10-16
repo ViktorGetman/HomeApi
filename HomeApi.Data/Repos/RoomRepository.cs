@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HomeApi.Data.Models;
@@ -31,7 +32,12 @@ namespace HomeApi.Data.Repos
         {
             return await _context.Rooms.Where(r => r.Name == name).FirstOrDefaultAsync();
         }
-        
+
+        public async Task<Room[]> GetRooms()
+        {
+            return await _context.Rooms.ToArrayAsync();
+        }
+
         /// <summary>
         ///  Добавить новую комнату
         /// </summary>
